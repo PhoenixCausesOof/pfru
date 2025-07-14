@@ -19,7 +19,7 @@ struct Cli {
     files: Vec<PathBuf>,
 
     /// Assigns a name for each capture, in the order it was matched by the pattern
-    #[arg(long = "cap")]
+    #[arg(long = "cap", value_delimiter = ',')]
     captures: Vec<String>,
 
     /// The pattern to match the filename with
